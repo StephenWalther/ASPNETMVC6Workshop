@@ -1,0 +1,10 @@
+﻿@model List<FirstApp.Models.Movie>
+
+<ul>
+    @foreach (var movie in Model)
+    {
+
+        <li>@movie.Title - @movie.Director</li>
+
+    }
+</ul>
