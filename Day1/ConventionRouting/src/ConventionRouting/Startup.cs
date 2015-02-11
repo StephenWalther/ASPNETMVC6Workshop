@@ -80,6 +80,12 @@ namespace ConventionRouting
             // Add MVC to the request pipeline.
             app.UseMvc(routes =>
             {
+                // wildcard route
+                routes.MapRoute(
+                    name: "documents",
+                    template: "documents/{*path}",
+                    defaults: new { controller = "Documents", action = "Index" });
+
                 // custom constraint
                 routes.MapRoute(
                     name: "iphone",
