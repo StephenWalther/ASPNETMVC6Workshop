@@ -1,0 +1,31 @@
+﻿@using Razor.Models
+@{ 
+    Layout = null;
+    var products = new List<Product>
+    {
+        new Product {Name="Milk", Price=3.44m, OnSale=false },
+        new Product {Name="Cheese", Price=1.44m, OnSale=true },
+        new Product {Name="Steak", Price=2.44m, OnSale=false }
+    };
+}
+
+<style>
+    #products div {
+        width: 500px;
+        padding:15px;
+        border: 1px solid darkgray;
+    }
+    .onSale {
+        background-color: lightyellow;
+    }
+</style>
+
+<div id="products">
+    @foreach (var product in products)
+    {
+        <div class='@(product.OnSale ? "onSale":"")'>
+            @product.Name - @product.Price.ToString("c")
+        </div>
+
+    }
+</div>

@@ -1,0 +1,7 @@
+﻿@model TypedViews.Views.Products.StrongViewModel
+<ul>
+    @foreach (var product in Model.Products)
+    {
+        <li>@product.Name</li>
+    }
+</ul>

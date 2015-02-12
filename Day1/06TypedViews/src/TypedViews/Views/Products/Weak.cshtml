@@ -1,0 +1,8 @@
+﻿@using TypedViews.Models
+
+<ul>
+    @foreach (var product in (IList<Product>)ViewData["products"])
+    {
+        <li>@product.Name</li>
+    }
+</ul>

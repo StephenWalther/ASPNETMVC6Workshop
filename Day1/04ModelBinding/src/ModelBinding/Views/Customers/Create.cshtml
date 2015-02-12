@@ -1,0 +1,48 @@
+﻿
+
+<form method="post" action="/Customers/Create">
+
+    <div>
+        <label>
+            First Name: <input name="firstName" />
+        </label>
+    </div>
+
+    <div>
+        <label>
+            Last Name: <input name="lastName" />
+        </label>
+    </div>
+
+    <!-- Billing Address -->
+    <fieldset>
+    <legend>Billing Address</legend>
+        <div>
+            <label>
+                Street: <input name="BillingAddress.Street" />
+            </label>
+        </div>
+        <div>
+            <label>
+                City: <input name="BillingAddress.City" />
+            </label>
+        </div>
+    </fieldset>
+
+    <!-- Shipping Address -->
+    <fieldset>
+    <legend>Shipping Address</legend>
+        <div>
+            <label>
+                Street: <input name="ShippingAddress.Street" />
+            </label>
+        </div>
+        <div>
+            <label>
+                City: <input name="ShippingAddress.City" />
+            </label>
+        </div>
+    </fieldset>
+
+    <input type="submit" value="Save" />
+</form>
