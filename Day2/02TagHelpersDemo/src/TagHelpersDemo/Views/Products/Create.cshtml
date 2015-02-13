@@ -1,0 +1,12 @@
+﻿@model TagHelpersDemo.Models.Product
+@addtaghelper "Microsoft.AspNet.Mvc.TagHelpers"
+
+<form asp-controller="Products" asp-action="Create" method="post">
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" />
+    </div>
+
+    <input type="submit" value="Save" />
+</form>
+

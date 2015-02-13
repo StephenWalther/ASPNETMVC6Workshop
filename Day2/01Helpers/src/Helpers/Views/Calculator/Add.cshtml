@@ -1,0 +1,21 @@
+﻿@model Helpers.Models.Calculator
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.FirstNumber, "First Number:")
+        @Html.TextBoxFor(m => m.FirstNumber)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.SecondNumber, "Second Number:")
+        @Html.TextBoxFor(m => m.SecondNumber)
+    </div>
+
+    <input type="submit" value="Add" />
+}
+
+<hr />
+<output>
+    @Html.DisplayTextFor(m=>m.Result)
+</output>

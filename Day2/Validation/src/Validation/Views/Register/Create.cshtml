@@ -1,0 +1,51 @@
+﻿@model Validation.Models.Register
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <div>
+        @Html.LabelFor(m => m.FirstName, "First Name:")
+        @Html.TextBoxFor(m => m.FirstName)
+        @Html.ValidationMessageFor(m => m.FirstName)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.LastName, "Last Name:")
+        @Html.TextBoxFor(m => m.LastName)
+        @Html.ValidationMessageFor(m => m.LastName)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.CreditCard, "Credit Card:")
+        @Html.TextBoxFor(m => m.CreditCard)
+        @Html.ValidationMessageFor(m => m.CreditCard)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Password, "Password:")
+        @Html.TextBoxFor(m => m.Password)
+        @Html.ValidationMessageFor(m => m.Password)
+    </div>
+
+
+    <div>
+        @Html.LabelFor(m => m.ConfirmPassword, "Confirm Password:")
+        @Html.TextBoxFor(m => m.ConfirmPassword)
+        @Html.ValidationMessageFor(m => m.ConfirmPassword)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.SocialSecurityNumber, "SSN:")
+        @Html.TextBoxFor(m => m.SocialSecurityNumber)
+        @Html.ValidationMessageFor(m => m.SocialSecurityNumber)
+    </div>
+    
+    <input type="submit" value="Create" />
+
+}
+
+<script src="~/lib/jquery/js/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+

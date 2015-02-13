@@ -1,0 +1,15 @@
+﻿@model Helpers.Views.DropDownList.CreateViewModel
+
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.Movie.Category.Id, "Category:")
+        @Html.DropDownListFor( m=> m.Movie.Category.Id, Model.Categories, "Pick One")
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Movie.Title, "Title:")
+        @Html.TextBoxFor(m => m.Movie.Title)
+    </div>
+    <input type="submit" value="Create" />
+}

@@ -1,0 +1,20 @@
+﻿
+
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.Label("Name", "Name:")
+        @Html.TextBox("Name")
+    </div>
+
+    <div>
+        @Html.Label("Price", "Price:")
+        @Html.TextBox("Price")
+    </div>
+
+    <div>
+        <input type="submit" value="Create" />
+    </div>
+
+}
