@@ -1,0 +1,35 @@
+﻿
+
+<html>
+<head>
+    <title>Toy Store</title>
+    <style>
+        .leftColumn {
+            width:500px;
+            border-right:2px solid darkgray;
+            background-color: lightyellow;
+            float:left;
+            padding:20px;
+        }
+        .rightColumn {
+            float:left;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <img width="300" src="http://99designs.com/logo-design/store/39693/preview/18143877~17614c511676ff9cce42e5903c60583c54422800-stocklarge" />
+    <br clear="all" />
+
+    <div class="leftColumn">
+        @RenderSection("LeftColumn")
+    </div>
+
+    <div class="rightColumn">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

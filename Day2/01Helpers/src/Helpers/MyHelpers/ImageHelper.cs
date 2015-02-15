@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNet.Mvc.Rendering;
 using System;
 
-// Must be this namespace!
-namespace Microsoft.AspNet.Mvc.Rendering
+namespace Helpers.MyHelpers  
 {
     public static class ImageHelper
     {

@@ -1,0 +1,8 @@
+﻿@model DateTime?
+@Html.TextBox("", ViewData.TemplateInfo.FormattedModelValue, new { @class = "datePicker" })
+
+<link rel="stylesheet" href="~/lib/pikaday/pikaday.css" />
+<script src="~/lib/pikaday/pikaday.js"></script>
+<script>
+    var picker = new Pikaday({ field: document.getElementsByClassName('datePicker')[0] });
+</script>

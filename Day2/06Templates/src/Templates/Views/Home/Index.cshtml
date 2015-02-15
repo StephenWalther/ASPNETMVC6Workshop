@@ -1,0 +1,9 @@
+﻿@model IList<Templates.Models.Movie>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@foreach (var movie in Model)
+{
+    @Html.DisplayFor(m => movie)
+}
