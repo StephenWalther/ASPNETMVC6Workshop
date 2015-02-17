@@ -1,0 +1,15 @@
+﻿@model IList<Repository.Models.Movie>
+
+<ul>
+    @foreach (var movie in Model)
+    {
+        <li>
+            @Html.ActionLink("delete", "Delete", new { id = movie.Id }) /
+            @Html.ActionLink("edit", "Edit", new {id=movie.Id}) /
+            @movie.Title - @movie.Director
+        </li>
+    }
+</ul>
+
+
+@Html.ActionLink("Add", "Create")

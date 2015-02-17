@@ -1,0 +1,11 @@
+﻿@model Repository.Models.Movie
+
+@using(Html.BeginForm())
+{
+    <div>
+        Are you sure that you want to delete the &quot;@Model.Title&quot; movie?
+        <br />
+        @Html.HiddenFor(m => m.Id)
+        <input type="submit" value="Yes" />
+    </div>
+}

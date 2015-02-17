@@ -37,24 +37,47 @@ namespace DatabaseCodeFirst.Controllers
             return View();
         }
 
-        public IActionResult Create()
+        public IActionResult Edit(int id)
         {
-            return View();
+            var movie = _db.Movies.First(m => m.Id == id);
+            return View(movie);
         }
 
         [HttpPost]
-        public IActionResult Create(Movie movie)
+        public IActionResult Edit(Movie movie)
         {
             if (ModelState.IsValid)
             {
-                _db.Movies.Add(movie);
-                _db.SaveChanges();
+                // bad method
+                //_db.Entry(movie).State = Microsoft.Data.Entity.EntityState.Modified;
+                //_db.SaveChanges();
+
+                // good method
+                var originalMovie = _db.Movies.First(m => m.Id == movie.Id);
+                originalMovie.Title = movie.Title;
+                originalMovie.Director = movie.Director;
+                _db.SaveChanges(); 
 
                 return RedirectToAction("Index");
             }
             return View();
         }
 
+        public IActionResult Delete(int id)
+        {
+            var movie = _db.Movies.First(m => m.Id == id);
+            return View(movie);
+        }
+
+        [ActionName("Delete")]
+        [HttpPost]
+        public IActionResult DeleteReally(int id)
+        {
+            _db.Movies.Remove(new Movie { Id = id });
+            _db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
 
     }
 }
