@@ -1,0 +1,13 @@
+{
+    "version": "1.0.0-*",
+    "dependencies": {
+        "AutoMapper": "2.2.0",
+        "Domain": "",
+        "Infrastructure": ""
+    },
+
+    "frameworks": {
+        "aspnet50": {},
+        "aspnetcore50": {}
+    }
+}

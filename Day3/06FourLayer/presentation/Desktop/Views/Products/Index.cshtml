@@ -1,0 +1,16 @@
+﻿@model IList<Services.Models.BriefProductDTO>
+
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>
+            @Html.ActionLink("details", "Details", new { id = product.Id }) /
+            @Html.ActionLink("delete", "Delete", new { id = product.Id }) /
+            @Html.ActionLink("edit", "Edit", new {id=product.Id}) /
+            @product.Name - @product.Price.ToString("c")
+        </li>
+    }
+</ul>
+
+
+@Html.ActionLink("Add", "Create")

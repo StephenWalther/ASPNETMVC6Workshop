@@ -1,0 +1,21 @@
+﻿@model Services.Models.FullProductDTO
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.Name, "Name:")
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Price, "Price:")
+        @Html.TextBoxFor(m => m.Price)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Description, "Description:")
+        @Html.TextBoxFor(m => m.Description)
+    </div>
+
+    <input type="submit" value="Edit" />
+}

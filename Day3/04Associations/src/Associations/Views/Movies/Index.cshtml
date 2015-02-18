@@ -1,0 +1,17 @@
+﻿@model IList<Associations.Models.Category>
+
+
+<ul>
+    @foreach (var category in this.Model)
+    {
+        <li>
+            @category.Name
+            <ul>
+                @foreach (var movie in category.Movies)
+                {
+                    <li>@movie.Title</li>
+                }
+            </ul>
+        </li>
+    }
+</ul>

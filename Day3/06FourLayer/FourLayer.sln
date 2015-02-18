@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22512.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentation", "{2ABFBB09-6283-4A8F-BFAF-0912FF94EAD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4F5AA866-B777-4E56-B0C5-CF6EEDDD0D6C}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+	ProjectSection(FolderGlobals) = preProject
+		global_1json__JSONSchema = http://json.schemastore.org/global
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{EB599666-4E68-479A-A64C-BA0209C3EBF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{E7F0FD72-7701-4599-B7F9-FC0272F7729D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{80A43D7D-2061-4936-BC8D-FD284D93CA50}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Domain", "domain\Domain\Domain.kproj", "{BBE28B81-B935-44B5-B990-CFB03247E358}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Infrastructure", "infrastructure\Infrastructure\Infrastructure.kproj", "{5B21DEA9-D4C6-49D7-B46C-67AC5F3D23CF}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Mobile", "presentation\Mobile\Mobile.kproj", "{DDC81A8F-7AFB-45FA-B87C-614F9D0CEEC0}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Desktop", "presentation\Desktop\Desktop.kproj", "{464AE676-C801-4CF9-9BAB-12EE8C055EF1}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Services", "services\Services\Services.kproj", "{D8E020C3-48A1-4692-B767-7D495FD6F72D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBE28B81-B935-44B5-B990-CFB03247E358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE28B81-B935-44B5-B990-CFB03247E358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE28B81-B935-44B5-B990-CFB03247E358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE28B81-B935-44B5-B990-CFB03247E358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B21DEA9-D4C6-49D7-B46C-67AC5F3D23CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B21DEA9-D4C6-49D7-B46C-67AC5F3D23CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B21DEA9-D4C6-49D7-B46C-67AC5F3D23CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B21DEA9-D4C6-49D7-B46C-67AC5F3D23CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDC81A8F-7AFB-45FA-B87C-614F9D0CEEC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDC81A8F-7AFB-45FA-B87C-614F9D0CEEC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDC81A8F-7AFB-45FA-B87C-614F9D0CEEC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDC81A8F-7AFB-45FA-B87C-614F9D0CEEC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{464AE676-C801-4CF9-9BAB-12EE8C055EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{464AE676-C801-4CF9-9BAB-12EE8C055EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{464AE676-C801-4CF9-9BAB-12EE8C055EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{464AE676-C801-4CF9-9BAB-12EE8C055EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8E020C3-48A1-4692-B767-7D495FD6F72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8E020C3-48A1-4692-B767-7D495FD6F72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8E020C3-48A1-4692-B767-7D495FD6F72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8E020C3-48A1-4692-B767-7D495FD6F72D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBE28B81-B935-44B5-B990-CFB03247E358} = {80A43D7D-2061-4936-BC8D-FD284D93CA50}
+		{5B21DEA9-D4C6-49D7-B46C-67AC5F3D23CF} = {E7F0FD72-7701-4599-B7F9-FC0272F7729D}
+		{DDC81A8F-7AFB-45FA-B87C-614F9D0CEEC0} = {2ABFBB09-6283-4A8F-BFAF-0912FF94EAD4}
+		{464AE676-C801-4CF9-9BAB-12EE8C055EF1} = {2ABFBB09-6283-4A8F-BFAF-0912FF94EAD4}
+		{D8E020C3-48A1-4692-B767-7D495FD6F72D} = {EB599666-4E68-479A-A64C-BA0209C3EBF8}
+	EndGlobalSection
+EndGlobal

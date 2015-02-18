@@ -1,0 +1,9 @@
+﻿@model Services.Models.FullProductDTO
+
+@using (Html.BeginForm())
+{
+    <div>
+        Are you sure that you want to delete the product &quot;@(Model.Name)&quot;?
+    </div>
+    <input type="submit" value="OK" />
+}

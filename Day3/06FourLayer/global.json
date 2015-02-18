@@ -1,0 +1,3 @@
+﻿{
+    "sources": [ "presentation", "services", "domain", "infrastructure", "test" ]
+}
