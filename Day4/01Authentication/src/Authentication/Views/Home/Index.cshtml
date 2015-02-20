@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+@if (ViewBag.IsEditor)
+{
+    <div>
+        Because you have the CanEdit claim, you can visit the following view:
+    </div>
+}
+else
+{
+    <div>
+        Because you don't have the CanEdit claim, you can't visit the following view:
+    </div>
+}
+
+@Html.ActionLink("Edit", "Edit")

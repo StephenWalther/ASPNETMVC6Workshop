@@ -98,7 +98,7 @@ namespace Repository
             });
 
             // setup automapper
-            AutoMapper.Map();
+            AutoMapperStartup.RegisterMaps();
 
         }
     }

@@ -1,0 +1,24 @@
+﻿
+<h1>Products</h1>
+
+<ul id="productList"></ul>
+
+
+@section Scripts {
+    <script>
+
+        $.get('/api/products')
+            .done(function (products) {
+                var list = '';
+                for (var i = 0; i < products.length; i++) {
+                    list += '<li>' + products[i].Name + '</li>';
+                }
+                $('#productList').html(list);
+            })
+            .fail(function (xhr) {
+                alert('Could not get products!');
+            });
+
+
+    </script>
+}
