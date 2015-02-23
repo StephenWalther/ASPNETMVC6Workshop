@@ -1,0 +1,38 @@
+﻿<html ng-app="resourceApp">
+<head>
+    <title>Resource App</title>
+    <link href="~/app.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div ng-controller="resourceController as resource">
+
+        <form name="formAdd" ng-submit="resource.add()">
+        <div>
+            <label>
+                Name: <input ng-model="resource.newProduct.Name" />
+            </label>
+        </div>
+        <div>
+            <label>
+                Price: <input ng-model="resource.newProduct.Price" />
+            </label>
+        </div>
+        <div>
+            <input type="submit" value="Add Product" />
+        </div>
+        </form>
+
+        <ul>
+            <li ng-repeat="product in resource.products">
+                {{product.Name}}
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="~/lib/angular/angular.js"></script>
+    <script src="~/lib/angular-resource/angular-resource.js"></script>
+    <script src="~/app.js"></script>
+</body>
+</html>

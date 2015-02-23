@@ -1,0 +1,17 @@
+﻿<html ng-app="ajaxApp">
+<head>
+    <title>Ajax App</title>
+    <link href="~/app.css" rel="stylesheet" />
+</head>
+<body ng-cloak>
+    <div ng-controller="ajaxController as ajax">
+        <ul>
+            <li ng-repeat="product in ajax.products">{{product.Name}}</li>
+        </ul>
+    </div>
+
+    <script src="~/lib/angular/angular.js"></script>
+    <script src="~/app.js"></script>
+
+</body>
+</html>

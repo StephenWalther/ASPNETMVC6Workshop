@@ -1,0 +1,38 @@
+﻿<html ng-app="simpleApp">
+<head>
+    <title>Simple App</title>
+</head>
+<body ng-cloak="true">
+
+    <form ng-controller="simpleController" ng-submit="createMessage()">
+        <div>
+            <label>
+                First Name: <input ng-model="firstName" />
+            </label>
+        </div>
+        <div>
+            <label>
+                Last Name: <input ng-model="lastName" />
+            </label>
+        </div>
+        <div>
+            <input type="submit" value="Build" />
+        </div>
+        {{firstName + ' ' + lastName}}
+
+        <hr />
+
+        {{message}}
+
+
+    </form>
+
+
+    <script src="~/lib/angular/angular.js"></script>
+    <script src="~/app.js"></script>
+
+</body>
+</html>
+
+
+

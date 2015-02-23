@@ -1,0 +1,38 @@
+﻿<html ng-app="validationApp">
+<head>
+    <title>Validation App</title>
+    <link href="~/app.css" rel="stylesheet" />
+</head>
+<body ng-cloak="true">
+
+    <form name="formAdd" novalidate ng-submit="main.addProduct()" ng-controller="validationController as main">
+        <div>
+            <label>
+                Name: <input name="Name" ng-model="main.Name" ng-required="true" />
+                <span class="error" ng-show="formAdd.Name.$touched && formAdd.Name.$error.required">
+                    Product name is required!
+                </span>
+            </label>
+        </div>
+        <div>
+            <label>
+                Price: <input name="Price" ng-model="main.Price" ng-required="true" ng-pattern="/\d+/" />
+                <span class="error" ng-show="formAdd.Price.$touched && formAdd.Price.$error.required">
+                    Product price is required!
+                </span>
+                <span class="error" ng-show="formAdd.Price.$touched && formAdd.Price.$error.pattern">
+                    Product price is invalid!
+                </span>
+            </label>
+        </div>
+        <div>
+            <input type="submit" value="Add Product" ng-disabled="formAdd.$invalid" />
+        </div>
+    </form>
+
+
+    <script src="~/lib/angular/angular.js"></script>
+    <script src="~/app.js"></script>
+
+</body>
+</html>
